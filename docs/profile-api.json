@@ -1,0 +1,254 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Profile API",
+        "description": "Profile API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000"
+        }
+    ],
+    "paths": {
+        "/api/profile/{id}": {
+            "post": {
+                "description": "create profile",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "requestBody": {
+                    "description": "create profile",
+                    "content": {
+                        "application/json"  :{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nama": {
+                                        "type": "string"
+                                    },
+                                    "kelas": {
+                                        "type": "string"
+                                    },
+                                    "tempat_lahir": {
+                                        "type": "string"
+                                    },
+                                    "tanggal_lahir": {
+                                        "type": "integer"
+                                    },
+                                    "alamat":{
+                                        "type": "string"
+                                    },
+                                    "jenis_kelamin":{
+                                        "type": "integer"
+                                    },
+                                    "foto": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200" : {
+                        "description": "success create profile",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "nama": {
+                                                    "type": "string"
+                                                },
+                                                "kelas": {
+                                                    "type": "string"
+                                                },
+                                                "tempat_lahir": {
+                                                    "type": "string"
+                                                },
+                                                "tanggal_lahir": {
+                                                    "type": "integer"
+                                                },
+                                                "alamat":{
+                                                    "type": "string"
+                                                },
+                                                "jenis_kelamin":{
+                                                    "type": "integer"
+                                                },
+                                                "foto": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "update profile",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "requestBody": {
+                    "description": "update profile",
+                    "content": {
+                        "application/json"  :{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nama": {
+                                        "type": "string"
+                                    },
+                                    "kelas": {
+                                        "type": "string"
+                                    },
+                                    "tempat_lahir": {
+                                        "type": "string"
+                                    },
+                                    "tanggal_lahir": {
+                                        "type": "integer"
+                                    },
+                                    "alamat":{
+                                        "type": "string"
+                                    },
+                                    "jenis_kelamin":{
+                                        "type": "integer"
+                                    },
+                                    "foto": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200" : {
+                        "description": "success update profile",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "nama": {
+                                                    "type": "string"
+                                                },
+                                                "kelas": {
+                                                    "type": "string"
+                                                },
+                                                "tempat_lahir": {
+                                                    "type": "string"
+                                                },
+                                                "tanggal_lahir": {
+                                                    "type": "integer"
+                                                },
+                                                "alamat":{
+                                                    "type": "string"
+                                                },
+                                                "jenis_kelamin":{
+                                                    "type": "integer"
+                                                },
+                                                "foto": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "description": "get contact",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200" : {
+                        "description": "success get profile",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "nama": {
+                                                    "type": "string"
+                                                },
+                                                "kelas": {
+                                                    "type": "string"
+                                                },
+                                                "tempat_lahir": {
+                                                    "type": "string"
+                                                },
+                                                "tanggal_lahir": {
+                                                    "type": "integer"
+                                                },
+                                                "alamat":{
+                                                    "type": "string"
+                                                },
+                                                "jenis_kelamin":{
+                                                    "type": "integer"
+                                                },
+                                                "foto": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "errors": {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
